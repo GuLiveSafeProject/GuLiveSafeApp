@@ -1,0 +1,100 @@
+<ion-view title="Help Me !!!" hide-nav-bar="false" id="HelpMe" >
+<ion-nav-buttons side="left">
+    <a ng-click = "goBack()" class="button button-icon icon ion-arrow-left-c"></a>
+    </ion-nav-buttons>
+    <ion-content  class="bg" padding="false" class="manual-ios-statusbar">
+
+<!-- <div class="col  custom_color_Menu ">
+  <img ui-sref="home" src="img/back.jpg" width="30px" height="30px" style="margin-bottom:-9px;margin-left:10px;"><span style="margin-left:10px;">
+  Help Me !!! </span>
+  </div> -->
+<form id="login_form" name="myForm" novalidate >
+
+<div class="row">
+
+  <div class="bg list list-inset col col-75" >
+  <label class="item item-input "  style="border-radius: 10px;border: 1px solid #000;">
+    <input type="text" placeholder="Contact 1"  ng-model="user.contact1" required></label>
+</div>
+
+<div class="bg list list-inset col col-25" ng-click="pickContact1()" style="margin-top:20px;padding-left:0px;">
+    <img src="img/contact.png" height="50%" width="50%">
+</div>
+
+</div>
+
+<div class="row">
+
+  <div class="bg list list-inset col col-75" >
+  <label class="item item-input "  style="border-radius: 10px;border: 1px solid #000;">
+    <input type="text" placeholder="Contact 2"  ng-model="user.contact2" required></label>
+</div>
+
+<div class="bg list list-inset col col-25" ng-click="pickContact2()" style="margin-top:20px;padding-left:0px;">
+    <img src="img/contact.png" height="50%" width="50%">
+</div>
+
+</div>
+
+<div class="row">
+
+  <div class="bg list list-inset col col-75" >
+  <label class="item item-input "  style="border-radius: 10px;border: 1px solid #000;">
+    <input type="text" placeholder="Contact 3"  ng-model="user.contact3" required></label>
+</div>
+
+<div class="bg list list-inset col col-25" ng-click="pickContact3()" style="margin-top:20px;padding-left:0px;">
+    <img src="img/contact.png" height="50%" width="50%">
+</div>
+
+</div>
+
+<div class="row">
+
+  <div class="bg list list-inset col col-75" >
+  <label class="item item-input "  style="border-radius: 10px;border: 1px solid #000;">
+    <input type="text" placeholder="Contact 4"  ng-model="user.contact4" required></label>
+</div>
+
+<div class="bg list list-inset col col-25" ng-click="pickContact4()" style="margin-top:20px;padding-left:0px;">
+    <img src="img/contact.png" height="50%" width="50%">
+</div>
+
+</div>
+
+<div class="row">
+
+  <div class="bg list list-inset col col-75" >
+  <label class="item item-input "  style="border-radius: 10px;border: 1px solid #000;">
+    <input type="text" placeholder="Contact 5"  ng-model="user.contact5" required></label>
+</div>
+
+<div class="bg list list-inset col col-25" ng-click="pickContact5()" style="margin-top:20px;padding-left:0px;">
+    <img src="img/contact.png" height="50%" width="50%">
+</div>
+
+</div>
+
+<div class="bg list list-inset">
+  <label class="item item-input " style="border-radius: 10px;border: 1px solid #000;" >
+<textarea type="text" placeholder="Help Message !!!" rows="5" ng-model="user.message" required></textarea>
+
+  </label>
+</div>
+
+<!-- <button class="button" ng-click="pickContact()">Contacts</button> -->
+<div class="row">
+<div class="text-center col col-50">
+<button  ng-click="save()" ng-disabled="myForm.$invalid" class="button button-assertive" align="center" style="padding: 0px 30px;
+font-size: 18px; font-weight:500; background-color:#000;"> Save </button>
+</div>
+<div class="text-center col col-50">
+<button ng-click="reset()" ng-disabled="myForm.$invalid" class="button button-assertive" align="center" style="padding: 0px 30px;
+    font-size: 18px; font-weight:500; background-color:#000;"> Reset </button>
+</div>
+</div>
+</form>
+      </ion-content>
+<ion-footer-bar class="custom_color_Menu">
+    </ion-footer-bar>
+</ion-view>

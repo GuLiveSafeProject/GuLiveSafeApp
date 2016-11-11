@@ -1,0 +1,75 @@
+<ion-view title="Home" hide-back-button="true" id="home">
+
+<ion-nav-buttons side="left" >
+
+        <button menu-toggle="left"  class="button button-icon icon ion-navicon"></button>
+
+      </ion-nav-buttons>
+
+    <ion-content on-double-tap="onDoubleTap()" has-header="true" padding="true" >
+
+    	<div class="spacer" style="width: 320px; height: 20px;"></div>
+
+        <div class="row">
+  <div ui-sref="reportAndIncident" nav-direction="forward" class="col col-33  grid_image ">
+            <img src="img/reportan-incident.png" width="70%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+                <h5 class="text-center">Report an Incident </h5>
+  </div>
+  <div ui-sref="shuttleService" nav-direction="forward" class="col col-33  grid_image">
+
+            <img src="img/shuttle-service.png" width="70%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+            <h5 class="text-center">Shuttle Service</h5>
+
+  </div>
+  <div ui-sref="GUKnightsService" nav-direction="forward" class="col col-33  grid_image">
+
+            <img src="img/GU-knights.png" width="70%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+            <h5 class="text-center">GU Knights</h5>
+
+  </div>
+</div>
+
+<div class="row">
+  <div ui-sref="MyCurrentLocation" nav-direction="forward" class="col col-33  grid_image">
+
+            <img src="img/mycurrent.png" width="70%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+                       <h5 class="text-center">My Current Location</h5>
+  </div>
+  <div ui-sref="NearbyPlaces" nav-direction="forward" class="col col-33  grid_image">
+
+            <img src="img/nearby.png" width="70%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+           <h5 class="text-center">Nearby Places</h5>
+
+  </div>
+  <div ui-sref="c_tabs.ss_c_reports" nav-direction="forward" class="col col-33  grid_image">
+
+            <img src="img/reports.png" width="70%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+           <h5 class="text-center">Current Reports</h5>
+
+  </div>
+</div>
+<div class="row">
+  <div ui-sref="tabs.ss_history" nav-direction="forward" class="col col-33  grid_image">
+
+            <img src="img/report-history.png" width="70%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+                     <h5 class="text-center">Report History</h5>
+
+  </div>
+  <div ui-sref="HelpMe" nav-direction="forward" class="col col-33  grid_image">
+
+            <img src="img/helpme.png" width="70%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+            <h5 class="text-center">Help Me !!!</h5>
+
+  </div>
+  <div  ng-click="logout()" class="col col-33  grid_image">
+
+            <img src="img/exit.png" width="70%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+           <h5 class="text-center">Exit</h5>
+
+  </div>
+</div>
+
+    </ion-content>
+    <ion-footer-bar class="custom_color_Menu">
+    </ion-footer-bar>
+</ion-view>

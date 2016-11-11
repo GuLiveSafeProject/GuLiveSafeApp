@@ -1,0 +1,62 @@
+<ion-view title="Report an Incident" hide-nav-bar="false" id="page2">
+<ion-nav-buttons side="left" >
+    <a ng-click = "goBack()" class="button button-icon icon ion-arrow-left-c"></a>
+    </ion-nav-buttons>
+    <ion-content class="bg" padding="false" class="manual-ios-statusbar">
+
+        <!-- <div class="col  custom_color_Menu ">
+  <img ui-sref="home" src="img/back.jpg" width="30px" height="30px" style="margin-bottom:-9px;margin-left:10px;"><span style="margin-left:10px;">Report an Incident</span>
+  </div> -->
+
+        <div class="spacer" style="width: 320px; height: 10px;"></div>
+        
+        <div class="row">
+  <div ng-click = "takePhoto()" class="col col-50  grid_image ">
+  	
+            <img src="img/capture.png" width="50%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+                <h5 class="text-center">Capture</h5>
+        
+  </div>
+  <div ng-click = "choosePhoto()" class="col col-50  grid_image">
+  	
+            <img src="img/gallery.png" width="50%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+             <h5 class="text-center">Gallery</h5>
+        
+  </div>
+</div>
+
+<div class="row">
+  <div ng-click="captureVideo()" class="col col-50  grid_image">
+  	
+            <img src="img/video.png" width="50%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+                        <h5 class="text-center">Video</h5>
+       
+  </div>
+  <div ng-click="captureAudio()" class="col col-50  grid_image">
+            <img src="img/record.png" width="50%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+             <h5 class="text-center">Record</h5>
+  </div>
+</div>
+
+<img ng-show="imgURI !== undefined" ng-src="{{imgURI}}" style="width: 100%; 
+height: 100%;">
+
+       <div class="row"> 
+    <div class="bg list list-inset col col-100">
+        <label class="item item-input "  style="border-radius: 10px; border: 1px solid #000;">
+           <textarea type="text" placeholder="Information" rows="5"
+           ng-model="user.information"></textarea>
+           
+        </label>
+    </div>
+</div>
+
+<div class="text-center"  style="margin-top:20px;"> 
+<button class="button button-assertive" ng-click="send()" align="center" style="padding: 0px 30px;
+    font-size: 18px; font-weight:500; background-color:#000;"> Send Information</button>
+</div>
+
+    </ion-content>
+    <ion-footer-bar class="custom_color_Menu">
+    </ion-footer-bar>
+</ion-view>

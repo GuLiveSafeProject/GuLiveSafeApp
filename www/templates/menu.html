@@ -1,0 +1,35 @@
+<ion-side-menus  enable-menu-with-back-views="true">
+    <ion-side-menu-content >
+
+        <ion-nav-bar class="bar-dark">
+            <ion-nav-back-button class="button-clear"><i class="icon ion-ios7-arrow-back"></i></ion-nav-back-button>
+      </ion-nav-bar>
+    
+        <ion-nav-view name="sidemenu"  animation="slide-left-right"></ion-nav-view>
+        
+    </ion-side-menu-content>
+
+    <ion-side-menu side="left"  id="side-menu">
+        
+        <ion-header-bar class="bar-header custom_color_Menu text-center">
+            <div style="color:white" class="title"><center>MENU</center></div>
+        </ion-header-bar>
+
+        <ion-content padding="false" class="side-menu-left has-header custom_color_Menu">
+        
+            <ion-list >
+                <ion-toggle toggle-class="toggle-assertive" ng-model=toggle1value ng-change="toggle1Change()" id="menu-toggle1" class="custom_color_Menu text-center ">Shake to Send <br> Help Me!!! Message </ion-toggle>
+                <ion-toggle toggle-class="toggle-assertive" ng-model=toggle2value ng-change="toggle2Change()" id="menu-toggle2" class="custom_color_Menu text-center">Double Tap on <br>Home Screen to Send <br>HelpMe!!! Message</ion-toggle>
+                <ion-item  id="menu-list-item7" class="custom_color_Menu text-center">About GU Live Safe</ion-item>
+                <ion-item id="menu-list-item8" class="custom_color_Menu text-center ">App Usage Tips</ion-item>
+                <ion-item id="menu-list-item9" class="custom_color_Menu text-center">LogOut</ion-item>
+            </ion-list>
+            
+        </ion-content>
+
+        <ion-footer-bar class="custom_color_Menu">
+    </ion-footer-bar>
+
+    </ion-side-menu>
+
+</ion-side-menus>

@@ -1,0 +1,47 @@
+<ion-view title="GU Live Safe" id="register" class="custom_color_header">
+
+<ion-nav-buttons side="left">
+    <a ui-sref="login" class="button button-icon icon ion-arrow-left-c"></a>
+    </ion-nav-buttons>
+    
+    <ion-content class="bg" padding="true" class=" manual-remove-top-padding has-header">
+
+    <div class="spacer" style="height: 40px;"></div>
+
+<form id="register_form" name="myForm" novalidate >
+            
+                <label class="item item-input" id="username" style="border-radius: 5px;border: 1px solid #000;">
+                    <input ng-model="user.username" type="text" placeholder="UserName" required >
+                </label>
+           
+            <div class="spacer" style="height: 20px;"></div>
+            
+            <label class="item item-input" id="phone" style="border-radius: 5px;border: 1px solid #000;">
+                <input ng-model="user.phone" type="number" placeholder="Phone Number" required>
+            </label>
+
+            <div class="spacer" style="height: 20px;"></div>
+            
+            <label class="item item-input" id="email" style="border-radius: 5px;border: 1px solid #000;">
+                <input ng-model="user.email" type="email" placeholder="Email Id"
+                ng-pattern="/gannon.edu/"  required >
+            </label>
+            <p>(Email format should be <span style="color:#870014;"> @gannon.edu</span>)</p>                
+            <div class="spacer" style="height: 20px;"></div>
+            
+            <label class="item item-input" id="password" style="border-radius: 5px;border: 1px solid #000;">
+                <input ng-model="user.password" type="password" placeholder="Password" required>
+            </label>
+
+            <div class="spacer" style="height: 40px;"></div>
+            
+            <div class="text-center">
+            <a id="register_button" align="center" style="padding: 0px 30px;
+    font-size: 18px; font-weight:500; background-color:#000;" class="button button-dark" ng-disabled="myForm.$invalid" ng-click="register()" >Register</a></div>
+
+        </form>
+     </ion-content>
+
+     <ion-footer-bar class="custom_color_Menu">
+    </ion-footer-bar>
+</ion-view>

@@ -1,0 +1,81 @@
+<ion-view title="Shuttle Service" hide-nav-bar="false" id="shuttleService">
+<ion-nav-buttons side="left">
+    <a ng-click = "goBack()" class="button button-icon icon ion-arrow-left-c"></a>
+    </ion-nav-buttons>
+    <ion-content class="bg scroll-content" padding="false" class="manual-ios-statusbar">
+
+<!-- <div class="col  custom_color_Menu ">
+  <img ui-sref="home" src="img/back.jpg" width="30px" height="30px" style="margin-bottom:-9px;margin-left:10px;"><span style="margin-left:10px;">Shuttle Service</span>
+  </div> -->
+
+  <div class="spacer" style="width: 320px; height: 10px;"></div>
+
+<h4 class="text-center">Request for Shuttle Service</h4>
+ 
+<div class="spacer" style="width: 320px; height: 10px;"></div>
+  <form id="shuttle_form" name="myForm" novalidate >
+<div class="scroll" style="-webkit-transform: translate3d(0px, 0px, 0px);">
+
+<div class="row" >
+  <div class="bg list list-inset col col-80">
+     <label class="item item-input " style="border-radius: 10px;border: 1px solid #000;" >
+        <input type="text" id="c_location" ionic-autocomplete="{items: locations, onSelect:c_location}"
+        placeholder="Current Location" ng-model="user.c_location"/>
+      </label>
+  </div>
+
+  <div class="col col-20">
+    <span> <img src="img/location.png" width="30" height="30" style="margin-top:24px; border-bottom-left:1px dotted #000;"></span>
+  </div>
+</div> 
+
+ <div class="row">
+    <div class="bg list list-inset col col-80" style="color:#777;">     
+       <label class="item item-input " style="border-radius: 10px;border: 1px solid #000;" >
+        <input type="text" id="d_location" ionic-autocomplete="{items: locations, onSelect:d_location}"
+        placeholder="Destination Location" ng-model="user.d_location" required/>
+        
+      </label>
+     
+    </div>
+   <div class="col col-20"> 
+    <span> <img src="img/location1.png" width="30" height="30" style="margin-top:24px;"></span>
+  </div>
+</div>
+
+<div class="row">
+<div class="bg list list-inset col col-80" style="color:#777;">
+  <label class="item item-input " style="border-radius: 10px;border: 1px solid #000;">
+        <input placeholder="PickUp Time" class="textbox-n" type="text" onfocus="(this.type='time')"  id="time" ng-model="user.time" required/>
+      </label>
+  </div>
+
+  <div class="col col-20"> 
+    <span> <img src="img/clock.gif" width="30" height="30" style="margin-top:24px; border-bottom-left:1px dotted #000;"></span>
+  </div>
+</div>
+
+<div class="row"> 
+    <div class="bg list list-inset col col-100">
+        <label class="item item-input "  style="border-radius: 10px; border: 1px solid #000;">
+          <textarea type="text" placeholder="Information" rows="5"
+           ng-model="user.information"></textarea>
+        </label>
+    </div>
+</div>
+
+<div class="text-center"  style="margin-top:20px;"> 
+<button ng-disabled="myForm.$invalid" ng-click="requestSh_Service()" class="button button-assertive" align="center" style="padding: 0px 30px;
+    font-size: 18px; font-weight:500; background-color:#000;"> Send Request
+    </button>
+</div>
+</div>
+
+<div class="scroll-bar scroll-bar-v">
+      <div class="scroll-bar-indicator scroll-bar-fade-out" style="height: 0px; -webkit-transform: translate3d(0px, 0px, 0px) scaleY(1);"></div>
+                     </div>
+</form>
+    </ion-content>
+<ion-footer-bar class="custom_color_Menu">
+    </ion-footer-bar>
+</ion-view>

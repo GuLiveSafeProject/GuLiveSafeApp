@@ -1,0 +1,59 @@
+<ion-view title="Report History" hide-nav-bar="false" id="about">
+<ion-nav-buttons side="left">
+    <a ng-click = "goBack()" class="button button-icon icon ion-arrow-left-c"></a>
+    </ion-nav-buttons>
+    <ion-content class="bg" padding="true" class=" manual-ios-statusbar">
+
+<ion-list>
+    <ion-item ng-repeat="x in shuttle_report_history" class="report_list" style="margin:4px;border-style: double;">
+            <div class="row" style="background-color:#ffc579;background-image: -webkit-gradient(linear, left top, left bottom, from(#ffc579), to(#fb9d23));border-radius:3px;">
+        <div class="col col-40">
+
+          <p style="font-size:13px; font-weight:400;color:#870014; ">Current Location</p>
+          <p style="font-size:13px; font-weight:400;color:#008000; ">Destination</p>
+        </div>
+        <div class="col col-20 text-center">
+
+          <p style="font-size:13px; font-weight:400; "> - </p>
+          <p style="font-size:13px; font-weight:400; "> - </p>
+        </div>
+        <div class="col col-40 text-right">
+
+          <p style="font-size:13px; font-weight:400;color:#fff; ">{{x.current_location}}</p>
+          <p style="font-size:13px; font-weight:400;color:#fff; ">{{x.destination_location}}</p>
+        </div>
+    </div> 
+    
+      <div class="col col-100 text-center" style="min-height:18px;text-align:center;">
+         <p>{{x.shuttle_message}}</p>
+      </div>
+
+      <div class="row" style="background-color:#ffecd8;">
+
+        <div class="col col-40">
+
+          <p style="font-size:13px; font-weight:400;color:#0064a2; ">Driver Name </p>
+          <p style="font-size:13px; font-weight:400;color:#0064a2; ">Driver Number</p>
+        </div>
+        <div class="col col-20 text-center">
+
+          <p style="font-size:13px; font-weight:400; "> - </p>
+          <p style="font-size:13px; font-weight:400; "> - </p>
+        </div>
+        <div class="col col-40 text-right">
+
+          <p style="font-size:13px; font-weight:400;color:#000; ">{{x.driver_name}}</p>
+          <p style="font-size:13px; font-weight:400;color:#000; ">{{x.driver_phone}}</p>
+        </div>
+      </div>
+
+        <div class="text-center" style="margin-top:10px;">
+          <b>Status :</b> <span style="color:#99CC99;">{{x.request_shtle_status}}...</span>
+        </div>
+     
+    </ion-item>
+</ion-list>
+
+<p ng-show="!shuttle_report_history.length" class="text-center" height="250px">No Previous Records Found!</p>
+    </ion-content>
+</ion-view>

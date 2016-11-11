@@ -1,0 +1,74 @@
+<ion-view class="bg" title="Current Reports" hide-nav-bar="false" id="MyReports">
+<ion-nav-buttons side="left">
+    <a ng-click = "goBack()" class="button button-icon icon ion-arrow-left-c"></a>
+    </ion-nav-buttons>
+    <ion-content padding="true" class="manual-ios-statusbar">
+
+
+<!-- <div class="col  custom_color_Menu ">
+  <img ui-sref="home" src="img/back.jpg" width="30px" height="30px" style="margin-bottom:-9px;margin-left:10px;"><span style="margin-left:10px;">
+  My Reports</span>
+  </div> -->
+
+<!-- <h5 class="text-center">Currently Progressing Requests and Complaints</h5>
+<div class="spacer" style="width: 320px; height: 20px;"></div> -->
+
+
+<ion-list class="report_list">
+    <ion-item ng-repeat="x in current_reports" class="report_list" style="margin:4px;border-style: double;">
+      			<div class="row" style="background-color:#ffc579;background-image: -webkit-gradient(linear, left top, left bottom, from(#ffc579), to(#fb9d23));border-radius:3px;">
+   			<div class="col col-40">
+
+   				<p style="font-size:13px; font-weight:400;color:#870014; ">Current Location</p>
+          <p style="font-size:13px; font-weight:400;color:#008000; ">Destination</p>
+   			</div>
+        <div class="col col-20 text-center">
+
+          <p style="font-size:13px; font-weight:400; "> - </p>
+          <p style="font-size:13px; font-weight:400; "> - </p>
+        </div>
+        <div class="col col-40 text-right">
+
+          <p style="font-size:13px; font-weight:400;color:#fff; ">{{x.current_location}}</p>
+          <p style="font-size:13px; font-weight:400;color:#fff; ">{{x.destination_location}}</p>
+        </div>
+    </div> 
+   	
+   	  <div class="col col-100 text-center" style="min-height:18px;text-align:center;">
+   		   <p>{{x.guknights_message||x.shuttle_message}}</p>
+   		</div>
+
+      <div class="row" style="background-color:#ffecd8;">
+
+        <div class="col col-40">
+
+          <p style="font-size:13px; font-weight:400;color:#0064a2; ">Driver Name </p>
+          <p style="font-size:13px; font-weight:400;color:#0064a2; ">Driver Number</p>
+        </div>
+        <div class="col col-20 text-center">
+
+          <p style="font-size:13px; font-weight:400; "> - </p>
+          <p style="font-size:13px; font-weight:400; "> - </p>
+        </div>
+        <div class="col col-40 text-right">
+
+          <p style="font-size:13px; font-weight:400;color:#000; ">{{x.driver_name||x.guard_name}}</p>
+          <p style="font-size:13px; font-weight:400;color:#000; ">{{x.guard_phone||x.driver_phone}}</p>
+        </div>
+      </div>
+
+   	<div class="row" style="margin-top:10px;">
+   			<div class="col col-50">
+   				<b>Status :</b> <span style="color:#99CC99;"> Processing...</span>
+   			</div>
+   			<div class="col col-50 text-right" >
+   				<button ng-click="CancelReq()" type="button" style="background-color:#a90329;background-image: -webkit-linear-gradient(top, #a90329, #6d0019); border-radius:3px;border-color:#870014; color:#fff;padding:4px;">Cancel Request</button>
+   			</div>
+   		</div>
+    </ion-item>
+</ion-list>
+
+     </ion-content>
+<ion-footer-bar class="custom_color_Menu">
+    </ion-footer-bar>
+</ion-view>

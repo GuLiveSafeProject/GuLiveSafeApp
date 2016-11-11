@@ -1,0 +1,41 @@
+<ion-view title="GU Live Safe" id="login" class="custom_color_header">
+    <ion-content class="bg" padding="true" class=" manual-remove-top-padding has-header">
+        <div class="spacer" style="width: 320px; height: 20px;"></div>
+        <div class="text-center">
+        <img src="img/GU_University.jpg" class="img_rdus" width="30%" height="auto">
+        </div>
+        <div class="spacer" style="width: 320px; height: 20px;"></div>
+        
+        <form id="login_form" name="myForm" novalidate >
+            
+                <label class="item item-input" id="email" style="border-radius: 5px;border: 1px solid #000;">
+                    <input ng-model="user.email" type="email" placeholder="Email Id"  required >
+                </label>
+           
+            <div class="spacer" style="height: 40px;"></div>
+            
+
+            <label class="item item-input" id="password" style="border-radius: 5px;border: 1px solid #000;">
+                <input ng-model="user.password" type="password" placeholder="Password"  required >
+            </label>
+
+            <div class="spacer" style="height: 40px;"></div>
+            
+            <div class="text-center">
+            <a  id="login_button" nav-direction="forward"  align="center" style="padding: 0px 30px;
+    font-size: 18px; font-weight:500; background-color:#000;" class="button button-dark" ng-disabled="myForm.$invalid" ng-click="login()" >LogIn</a></div>
+
+    <div class="spacer" style="height: 40px;"></div>
+<div class="row">
+            <div ui-sref="forgot_pass" class="col col-50">
+                <p style="font-size:12px; font-weight:bold; color:#870014; " >Forgot Password</p>
+            </div>
+            <div ui-sref="register" class="col col-50">
+                <p style="font-size:12px; font-weight:bold; color:#870014;">No account yet?Create one</p>
+            </div>
+        </div>
+        </form>
+    </ion-content>
+    <ion-footer-bar class="custom_color_Menu">
+    </ion-footer-bar>
+</ion-view>
